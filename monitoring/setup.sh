@@ -1,5 +1,7 @@
 #!/bin/sh
 echo "Cleaning up"
+kubectl delete -f gke-monitor-ingress.yaml
+kubectl delete -f gke-managed-certs.yaml
 helm uninstall prometheus 
 helm uninstall grafana
 echo "Installing"
