@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gke-monitor-ingress
+  annotations:
+    kubernetes.io/ingress.allow-http: "false"
+    kubernetes.io/ingress.global-static-ip-name: monitor-load-balancer-static-ip
+    networking.gke.io/managed-certificates: gke-managed-certificate-for-monitoring
+  labels:
+    purpose: gke-ingress-for-prometheus-grafana
+spec:
+  rules:
+  - host: prometheus.getsafefood.com
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: prometheus-server
+          servicePort: 80
+  - host: grafana.getsafefood.com
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: grafana
+          servicePort: 80
