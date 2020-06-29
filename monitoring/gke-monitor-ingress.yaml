@@ -10,14 +10,14 @@ metadata:
     purpose: gke-ingress-for-prometheus-grafana
 spec:
   rules:
-  - host: prometheus.getsafefood.com
+  - host: prometheus.itradenetwork.net
     http:
       paths:
       - path: /*
         backend:
           serviceName: prometheus-server
           servicePort: 80
-  - host: grafana.getsafefood.com
+  - host: grafana.itradenetwork.net
     http:
       paths:
       - path: /*

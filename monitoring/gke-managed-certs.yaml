@@ -4,5 +4,5 @@ metadata:
   name: gke-managed-certificate-for-monitoring
 spec:
   domains:
-    - grafana.getsafefood.com
-    - prometheus.getsafefood.com
+    - grafana.itradenetwork.net
+    - prometheus.itradenetwork.net

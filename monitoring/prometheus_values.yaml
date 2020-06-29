@@ -1191,15 +1191,15 @@ serverFiles:
         scrape_interval: 10s
         static_configs:
         - targets:
-          - ord-0.orderer.getsafefood.com
-          - ord-1.orderer.getsafefood.com
-          - ord-2.orderer.getsafefood.com
-          - peer-0.org1.getsafefood.com
-          - peer-1.org1.getsafefood.com
-          - peer-2.org1.getsafefood.com
-          - peer-0.org2.getsafefood.com
-          - peer-1.org2.getsafefood.com
-          - peer-2.org2.getsafefood.com
+          - ord-0.ibcorderer.itradenetwork.net
+          - ord-1.ibcorderer.itradenetwork.net
+          - ord-2.ibcorderer.itradenetwork.net
+          - peer-0.ibcorg1.itradenetwork.net
+          - peer-1.ibcorg1.itradenetwork.net
+          - peer-2.ibcorg1.itradenetwork.net
+          - peer-0.ibcorg2.itradenetwork.net
+          - peer-1.ibcorg2.itradenetwork.net
+          - peer-2.ibcorg2.itradenetwork.net
 
       - job_name: prometheus
         static_configs:
